@@ -1,0 +1,222 @@
+/* ================================
+   🔵 إعدادات عامة للصفحة
+   ================================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================================
+   🟢 صندوق المحتوى الرئيسي
+   ================================ */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================================
+   🟡 عناوين الموقع
+   ================================ */
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* ================================
+   🔵 منطقة إدخال البيانات
+   ================================ */
+.input-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* ================================
+   🟣 زر عرض النتائج
+   ================================ */
+button {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   🟢 صندوق النتيجة بالكامل
+   ================================ */
+#result {
+    margin-top: 25px;
+    padding: 0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ================================
+   🟧 بيانات الطالب (الاسم + الرقم)
+   ================================ */
+.student-info-box {
+    background: #e8f4ff;
+    padding: 15px;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #2c3e50;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   🟦 عنوان كل ورقة نتائج
+   ================================ */
+.sheet-title {
+    text-align: center;
+    margin: 15px 0;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+/* ================================
+   🔴 تنسيق الجدول العصري
+   ================================ */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table th {
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center !important;
+}
+
+.result-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 16px;
+
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.result-table tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* صفوف ممتازة */
+.result-table .highlight {
+    background-color: #e1f5fe;
+    font-weight: bold;
+    color: #0277bd;
+}
+
+/* ================================
+   🟩 الملخص النهائي
+   ================================ */
+.summary {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ================================
+   ⚪ الفوتر
+   ================================ */
+.footer {
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* ================================
+   📱 الاستجابة للشاشات الصغيرة
+   ================================ */
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .result-table th,
+    .result-table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    input {
+        width: 95%;
+    }
+
+    .student-info-box {
+        font-size: 16px;
+    }
+}
